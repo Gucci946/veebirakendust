@@ -1,0 +1,869 @@
+/* =========================================================
+   ✦ PREMIUM WEBSITE DESIGN
+   Modern / Glassmorphism / Responsive
+   ========================================================= */
+
+/* ---------- ОСНОВНЫЕ НАСТРОЙКИ ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #f5f5f5;
+
+    background:
+            radial-gradient(circle at 10% 10%, rgba(255, 94, 0, 0.16), transparent 30%),
+            radial-gradient(circle at 90% 20%, rgba(255, 166, 0, 0.12), transparent 30%),
+            radial-gradient(circle at 50% 90%, rgba(255, 70, 0, 0.10), transparent 35%),
+            #0b0b0f;
+
+    line-height: 1.6;
+}
+
+/* красивые выделения */
+
+::selection {
+    background: #ff5a00;
+    color: white;
+}
+
+/* ---------- ЗАГОЛОВКИ ---------- */
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
+    font-family: Georgia, serif;
+    color: white;
+    letter-spacing: 4px;
+    line-height: 1.05;
+}
+
+h2 {
+    font-family: Georgia, serif;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: relative;
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(0, 0, 0, 0.92),
+                    rgba(30, 15, 5, 0.72),
+                    rgba(0, 0, 0, 0.94)
+            ),
+            url("Nimetu.png");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 1px solid rgba(255, 110, 20, 0.3);
+}
+
+/* декоративное свечение */
+
+header::before {
+    content: "";
+
+    position: absolute;
+    width: 500px;
+    height: 500px;
+
+    background: rgba(255, 69, 0, 0.18);
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    top: -250px;
+    left: -150px;
+}
+
+header::after {
+    content: "";
+
+    position: absolute;
+    width: 450px;
+    height: 450px;
+
+    background: rgba(255, 166, 0, 0.12);
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    bottom: -300px;
+    right: -150px;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    padding: 40px 60px;
+
+    text-align: center;
+    font-variant: small-caps;
+
+    background: rgba(20, 20, 25, 0.45);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+            0 30px 80px rgba(0, 0, 0, 0.55),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+    text-shadow:
+            0 0 25px rgba(255, 85, 0, 0.7);
+
+    animation: headerAppear 1.2s ease forwards;
+}
+
+/* маленькая оранжевая линия */
+
+header h1::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    margin: 25px auto 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+            90deg,
+            #ff3c00,
+            #ff9d00
+    );
+
+    box-shadow: 0 0 20px rgba(255, 90, 0, 0.8);
+}
+
+@keyframes headerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    margin: 0;
+    padding: 14px 20px;
+
+    background: rgba(10, 10, 13, 0.78);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+nav ul {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+}
+
+nav ul li {
+    float: none;
+}
+
+nav ul li a {
+    position: relative;
+
+    display: block;
+
+    padding: 12px 22px;
+
+    color: #eaeaea;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    font-variant: small-caps;
+
+    border: 1px solid transparent;
+
+    border-radius: 50px;
+
+    transition:
+            color 0.3s ease,
+            background 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+nav ul li a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 5px;
+
+    width: 0;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+            90deg,
+            #ff3c00,
+            #ff9d00
+    );
+
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white;
+
+    background: rgba(255, 80, 0, 0.12);
+
+    border-color: rgba(255, 100, 0, 0.25);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+            0 8px 25px rgba(255, 70, 0, 0.15);
+}
+
+nav ul li a:hover::before {
+    width: 50%;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+    width: min(1400px, 92%);
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+}
+
+main > h2 {
+    position: relative;
+
+    margin-bottom: 55px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    letter-spacing: 2px;
+
+    text-shadow:
+            0 0 25px rgba(255, 80, 0, 0.35);
+}
+
+main > h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    margin: 18px auto 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+            90deg,
+            #ff3b00,
+            #ffb000
+    );
+
+    box-shadow:
+            0 0 20px rgba(255, 80, 0, 0.5);
+}
+
+/* =========================================================
+   ОСНОВНАЯ СЕТКА
+   ========================================================= */
+
+#suurkast {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 28px;
+
+    margin-top: 20px;
+}
+
+/* =========================================================
+   КАРТОЧКИ
+   ========================================================= */
+
+#suurkast section {
+    position: relative;
+
+    min-height: 400px;
+
+    margin: 0;
+    padding: 35px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+            linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.075),
+                    rgba(255, 255, 255, 0.025)
+            );
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 28px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.07);
+
+    transition:
+            transform 0.45s ease,
+            box-shadow 0.45s ease,
+            border-color 0.45s ease;
+}
+
+/* декоративный свет внутри карточки */
+
+#suurkast section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -130px;
+    right: -100px;
+
+    background: rgba(255, 70, 0, 0.14);
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    transition: transform 0.5s ease;
+}
+
+#suurkast section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 80px;
+
+    top: 0;
+    left: 50%;
+
+    background: linear-gradient(
+            transparent,
+            rgba(255, 100, 0, 0.8),
+            transparent
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.4s ease;
+}
+
+#suurkast section:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(255, 100, 0, 0.35);
+
+    box-shadow:
+            0 30px 80px rgba(0, 0, 0, 0.55),
+            0 0 35px rgba(255, 70, 0, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#suurkast section:hover::before {
+    transform: scale(1.5);
+}
+
+#suurkast section:hover::after {
+    opacity: 1;
+}
+
+/* заголовки карточек */
+
+#suurkast section h2 {
+    position: relative;
+    z-index: 2;
+
+    margin-bottom: 25px;
+
+    color: #ff7138;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.8rem;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+            0 0 20px rgba(255, 80, 0, 0.3);
+}
+
+/* текст */
+
+#suurkast section p {
+    position: relative;
+    z-index: 2;
+
+    color: #cfcfcf;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+/* =========================================================
+   ГАЛЕРЕЯ
+   ========================================================= */
+
+.galerii {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    justify-content: center;
+
+    max-width: 680px;
+
+    margin: 0 auto;
+}
+
+.galerii img {
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 18px;
+
+    filter: saturate(0.85);
+
+    transition:
+            transform 0.5s ease,
+            filter 0.5s ease,
+            box-shadow 0.5s ease,
+            border-color 0.5s ease;
+}
+
+.galerii img:hover {
+    transform: scale(1.04);
+
+    filter: saturate(1.15) brightness(1.08);
+
+    border-color: rgba(255, 100, 0, 0.5);
+
+    box-shadow:
+            0 20px 45px rgba(0, 0, 0, 0.55),
+            0 0 25px rgba(255, 70, 0, 0.15);
+}
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+#video iframe {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+
+    height: 475px;
+
+    margin: 30px auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.5),
+            0 0 30px rgba(255, 70, 0, 0.08);
+}
+
+/* =========================================================
+   КАРТА
+   ========================================================= */
+
+#kaart iframe {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+    height: 450px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    filter: grayscale(0.15) contrast(1.05);
+
+    box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   МУЗЫКА
+   ========================================================= */
+
+#muusika iframe {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+    max-width: 700px;
+
+    height: 352px;
+
+    margin: 30px auto;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    box-shadow:
+            0 25px 70px rgba(0, 0, 0, 0.5),
+            0 0 35px rgba(255, 90, 0, 0.08);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    position: relative;
+
+    padding: 45px 20px;
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-variant: small-caps;
+
+    letter-spacing: 2px;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.025),
+                    rgba(255, 255, 255, 0.01)
+            );
+
+    border-top: 1px solid rgba(255, 100, 0, 0.2);
+
+    box-shadow:
+            0 -20px 60px rgba(0, 0, 0, 0.2);
+}
+
+footer::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+            90deg,
+            #ff3b00,
+            #ffad00
+    );
+}
+
+/* =========================================================
+   СКРОЛЛБАР
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08080b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+            #ff3b00,
+            #ff9d00
+    );
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6a00;
+}
+
+/* =========================================================
+   АДАПТИВНОСТЬ — ПЛАНШЕТ
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        min-height: 360px;
+    }
+
+    #suurkast {
+        grid-template-columns: 1fr;
+    }
+
+    #suurkast section {
+        min-height: 350px;
+    }
+
+    .galerii {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .galerii img {
+        height: 280px;
+    }
+
+    #video iframe {
+        height: 420px;
+    }
+}
+
+/* =========================================================
+   АДАПТИВНОСТЬ — ТЕЛЕФОН
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        min-height: 300px;
+
+        padding: 25px;
+    }
+
+    header h1 {
+        width: 100%;
+
+        padding: 30px 20px;
+
+        font-size: 2.4rem;
+
+        letter-spacing: 2px;
+
+        border-radius: 22px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 12px;
+
+        text-align: center;
+
+        border-radius: 14px;
+    }
+
+    main {
+        width: 94%;
+
+        padding: 55px 0;
+    }
+
+    main > h2 {
+        font-size: 2rem;
+
+        margin-bottom: 35px;
+    }
+
+    #suurkast {
+        gap: 20px;
+    }
+
+    #suurkast section {
+        min-height: auto;
+
+        padding: 25px 18px;
+
+        border-radius: 22px;
+    }
+
+    #suurkast section h2 {
+        font-size: 1.5rem;
+    }
+
+    .galerii {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .galerii img {
+        height: 300px;
+    }
+
+    #video iframe {
+        height: 230px;
+
+        border-radius: 16px;
+    }
+
+    #kaart iframe {
+        height: 350px;
+
+        border-radius: 16px;
+    }
+
+    #muusika iframe {
+        height: 352px;
+
+        border-radius: 16px;
+    }
+
+    footer {
+        padding: 35px 15px;
+
+        font-size: 0.85rem;
+    }
+}
+
+/* =========================================================
+   СОВСЕМ МАЛЕНЬКИЕ ЭКРАНЫ
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main > h2 {
+        font-size: 1.7rem;
+    }
+
+    .galerii img {
+        height: 250px;
+    }
+
+    #video iframe {
+        height: 210px;
+    }
+}
