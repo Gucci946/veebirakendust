@@ -1,85 +1,198 @@
-    h1{
-        font-size: larger;
-        font-family: Georgia, sans-serif;
-        color: orangered;
-    }
-    header h1{
-        padding: 5%;
-        font-variant: small-caps;
-        border-bottom: 2px dotted orange;
-    }
-    header {
-        background-color: floralwhite;
-        background-image: url('Nimetu.png');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    footer{
-        padding: 5%;
-        background-color: floralwhite;
-        font-variant: small-caps;
-        border-top: 2px dotted orange;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-    }
-    section#kast1, img{
-        border: 1px groove lightgray; /*solid, double, dashed, dotted*/
-        width: 25%;
-        margin: 5px;
-        padding: 1%;
-        border-radius: 60px 120px 60px 120px;
-        text-align: center;
-        background-color: gray;
-        position: absolute;
-        left: 0px;
-        top: 250px;
-    }
-    section#kast2{
-        border: 1px groove lightgray; /*solid, double, dashed, dotted*/
-        width: 25%;
-        margin: 5px;
-        padding: 1%;
-        border-radius: 60px 120px 60px 120px;
-        text-align: center;
-        background-color: gray;
-        position: absolute;
-        left: 300px;
-        top: 250px;
-    }
-    /**************NAV****************/
-    nav ul{
-        list-style-type: none; /*täpp võtab ära'*/
-        margin: 0;
-        padding: 0;background-color: lightgray;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: hidden;
-    }
-    nav ul li{
-        float: left;
-    }
-    nav ul li a{
-        display: block;
-        color: orangered;
-        text-decoration: none; /* alljoone on kustutatud*/
-        padding: 5%;
-        text-align: center;
-        border-left: 2px solid orangered;
-        border-right: 2px solid orangered;
-        border-radius: 20%;
-        font-variant: small-caps;
+/* üldine stiil */
 
+h1 {
+    font-size: larger;
+    font-family: Georgia, sans-serif;
+    color: orangered;
+}
+
+header h1 {
+    padding: 5%;
+    margin: 0;
+    font-variant: small-caps;
+    border-bottom: 2px dotted orange;
+}
+
+header {
+    background-color: floralwhite;
+    background-image: url('Nimetu.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* footer */
+
+footer {
+    padding: 2%;
+    background-color: floralwhite;
+    font-variant: small-caps;
+    border-top: 2px dotted orange;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* nav */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: orangered;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    border-left: 2px solid orangered;
+    border-right: 2px solid orangered;
+    border-radius: 20%;
+    font-variant: small-caps;
+}
+
+nav ul li a:hover {
+    background-color: lightsalmon;
+}
+
+nav {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+/* main */
+
+main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+main > h2 {
+    text-align: center;
+    color: orangered;
+    font-family: Georgia, sans-serif;
+}
+
+/* meedia grid */
+
+#suurkast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* section */
+
+#suurkast section {
+    border: 1px groove lightgray;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: gray;
+    box-sizing: border-box;
+    min-height: 400px;
+}
+
+#suurkast section h2 {
+    color: orangered;
+    font-family: Georgia, sans-serif;
+    margin-top: 0;
+}
+
+/* pildigalerii */
+
+.galerii {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.galerii img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    border: 1px groove lightgray;
+    border-radius: 10px;
+}
+
+/* vidio */
+
+#video iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* kaart */
+
+#kaart iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* muusika */
+
+#muusika iframe {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 352px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* väiksem ekraan */
+
+@media (max-width: 1000px) {
+
+    #suurkast {
+        grid-template-columns: 1fr;
     }
-    nav ul li a:hover{ /*linkid fookuses*/
-        background-color: lightsalmon;
+
+    .galerii {
+        grid-template-columns: repeat(2, 300px);
     }
-    nav{
-        padding: 5%;
-        margin-left: 10px;
+}
+
+@media (max-width: 700px) {
+
+    .galerii {
+        grid-template-columns: 300px;
     }
-    main{
-        margin-top: 20px;
+
+    nav ul {
+        flex-direction: column;
     }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a {
+        padding: 15px;
+    }
+
+    #suurkast section {
+        min-height: auto;
+    }
+}
