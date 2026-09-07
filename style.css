@@ -1,0 +1,85 @@
+    h1{
+        font-size: larger;
+        font-family: Georgia, sans-serif;
+        color: orangered;
+    }
+    header h1{
+        padding: 5%;
+        font-variant: small-caps;
+        border-bottom: 2px dotted orange;
+    }
+    header {
+        background-color: floralwhite;
+        background-image: url('Nimetu.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    footer{
+        padding: 5%;
+        background-color: floralwhite;
+        font-variant: small-caps;
+        border-top: 2px dotted orange;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    section#kast1, img{
+        border: 1px groove lightgray; /*solid, double, dashed, dotted*/
+        width: 25%;
+        margin: 5px;
+        padding: 1%;
+        border-radius: 60px 120px 60px 120px;
+        text-align: center;
+        background-color: gray;
+        position: absolute;
+        left: 0px;
+        top: 250px;
+    }
+    section#kast2{
+        border: 1px groove lightgray; /*solid, double, dashed, dotted*/
+        width: 25%;
+        margin: 5px;
+        padding: 1%;
+        border-radius: 60px 120px 60px 120px;
+        text-align: center;
+        background-color: gray;
+        position: absolute;
+        left: 300px;
+        top: 250px;
+    }
+    /**************NAV****************/
+    nav ul{
+        list-style-type: none; /*täpp võtab ära'*/
+        margin: 0;
+        padding: 0;background-color: lightgray;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+    nav ul li{
+        float: left;
+    }
+    nav ul li a{
+        display: block;
+        color: orangered;
+        text-decoration: none; /* alljoone on kustutatud*/
+        padding: 5%;
+        text-align: center;
+        border-left: 2px solid orangered;
+        border-right: 2px solid orangered;
+        border-radius: 20%;
+        font-variant: small-caps;
+
+    }
+    nav ul li a:hover{ /*linkid fookuses*/
+        background-color: lightsalmon;
+    }
+    nav{
+        padding: 5%;
+        margin-left: 10px;
+    }
+    main{
+        margin-top: 20px;
+    }
