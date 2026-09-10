@@ -1,32 +1,60 @@
-table#lihtne{
+table#lihtne1 {
     border: 1px solid black;
     width: 30%;
     height: 100px;
     text-align: center;
+    border-collapse: collapse;
 }
-td{
+
+td {
     border: 1px solid black;
 }
-table#keeruline1{
+
+table#keeruline1 {
     border: 1px solid black;
     width: 10%;
     height: 200px;
     text-align: center;
     border-collapse: collapse;
 }
-table#keeruline2{
-    border: 1px solid red;
-    width: 200px;
-    height: 200px;
+
+table#keeruline2 {
+    border: 2px solid black;
+    width: 700px;
+    height: 500px;
+    margin: 50px auto;
     text-align: center;
-    vertical-align: top;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
     border-collapse: collapse;
 }
-table#keeruline2 td{
-vertical-align: top;
-    border: 1px solid red;
-    background-color: lightgrey;
+
+table#keeruline2 td {
+    border: 2px solid black;
 }
-.nimia{
+
+/* A */
+table#keeruline2 .nimia {
+    width: 20%;
     background-color: red;
+}
+
+/* B */
+table#keeruline2 tr:first-child {
+    height: 25%;
+}
+
+/* C ja D */
+table#keeruline2 tr:nth-child(2) {
+    height: 20%;
+}
+
+/* F */
+table#keeruline2 tr:nth-child(3) {
+    height: 15%;
+}
+
+/* G */
+table#keeruline2 tr:nth-child(4) {
+    height: 20%;
 }

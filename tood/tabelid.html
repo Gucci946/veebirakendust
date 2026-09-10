@@ -6,9 +6,11 @@
   <link rel="stylesheet" href="tabelStyle.css">
 </head>
 <body>
+
 <h1>Tabelid</h1>
+
 <h2>Lihtne Tabel</h2>
-<table id = "lihtne1">
+<table id="lihtne1">
   <tr>
     <td class="nimia">A</td>
     <td>B</td>
@@ -17,31 +19,42 @@
     <td>C</td>
     <td>D</td>
   </tr>
-
 </table>
+
+
 <h2>Lihte Tabel Kus on ühendatud lahtrid</h2>
-<table id = "keeruline1">
+<table id="keeruline1">
   <tr>
     <td colspan="2" class="nimia">A</td>
-
   </tr>
   <tr>
     <td>C</td>
     <td>D</td>
   </tr>
-
 </table>
+
+
 <h2>Veel üks tabel ku on ühendatud lahtrid</h2>
-<table id = "keeruline2">
+<table id="keeruline2">
   <tr>
-    <td rowspan="2" class="nimia">A</td>
-    <td>B</td>
+    <td rowspan="4" class="nimia">A</td>
+    <td colspan="3">B</td>
   </tr>
-  <tr>
 
+  <tr>
+    <td>C</td>
     <td>D</td>
+    <td rowspan="3">E</td>
   </tr>
 
+  <tr>
+    <td colspan="2">F</td>
+  </tr>
+
+  <tr>
+    <td colspan="2">G</td>
+  </tr>
 </table>
+
 </body>
 </html>
