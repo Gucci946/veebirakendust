@@ -1,11 +1,18 @@
+
 canvas#canvas {
     background-color: greenyellow;
     border: 1px solid green;
     border-radius: 5px;
-    width: 300pt;
-    height: 300pt
+    width: 400px;
+    height: 400px;
 }
-table{
+
+table {
     position: absolute;
-left: 320pt;
-top: 50pt;
+    left: 430px;
+    top: 50px;
+}
+
+td {
+    padding: 5px;
+}
