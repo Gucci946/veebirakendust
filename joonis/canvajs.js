@@ -70,5 +70,68 @@ function pilt() {
         fail.onload=()=>{
             tx.drawImage(fail, 50, 50, 100, 100);
         }
+
+        function Ratas1() {
+            const canvas = document.getElementById('canvas'); //määrame canvas element'
+            const r=document.getElementById('raadius');
+            if (canvas.getContext) {
+                let tx = canvas.getContext('2d'); //2d tasand
+                //tx.beginPath();
+                tx.strokeStyle="black";
+                tx.fillStyle="yellow";
+                tx.arc(250,300, r.value, 0, 2*Math.PI, true); //x,y -keskpunkt, R-raadius
+                tx.fill();
+                //tx.stroke();
+            }
+            function Ratas2() {
+                const canvas = document.getElementById('canvas'); //määrame canvas element'
+                const r=document.getElementById('raadius');
+                if (canvas.getContext) {
+                    let tx = canvas.getContext('2d'); //2d tasand
+                    //tx.beginPath();
+                    tx.strokeStyle="black";
+                    tx.fillStyle="yellow";
+                    tx.arc(300,350, r.value, 0, 2*Math.PI, true); //x,y -keskpunkt, R-raadius
+                    tx.fill();
+                    //tx.stroke();
+                }
+        }
+            function Kere() {
+                const canvas = document.getElementById('canvas'); //määrame canvas element'
+                let l=document.getElementById('laius');
+                let k=document.getElementById('kyrgus');
+                if (canvas.getContext) {
+                    let tx = canvas.getContext('2d'); //2d tasand
+                    tx.fillStyle="red";
+                    tx.fillRect(275,285,l.value,k.value);
+                }
+        }
+            function Tuled(){
+                const canvas = document.getElementById('canvas'); //määrame canvas element'
+                //joon - линия
+                if(canvas.getContext){
+                    let tx = canvas.getContext('2d'); //2d tasand
+                    tx.beginPath();
+                    tx.strokeStyle="blue";
+                    tx.lineWidth = 3;
+                    tx.moveTo(225, 200); //alguspunkt
+                    tx.lineTo(300, 150); //lõpppunkt
+                    tx.stroke();
+                    tx.beginPath();
+                    tx.strokeStyle="blue";
+                    tx.lineWidth = 3;
+                    tx.moveTo(225, 220); //alguspunkt
+                    tx.lineTo(300, 220); //lõpppunkt
+                    tx.stroke();
+                    tx.beginPath();
+                    tx.strokeStyle="blue";
+                    tx.lineWidth = 3;
+                    tx.moveTo(225, 240); //alguspunkt
+                    tx.lineTo(270, 270); //lõpppunkt
+                    tx.stroke();
+
+
+                }
+            }
+        }
     }
-}
