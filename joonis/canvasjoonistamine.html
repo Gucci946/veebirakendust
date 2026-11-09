@@ -1,60 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Joonistamine</title>
-    <link rel="stylesheet" href="canvacss.css">
-    <script src="canvajs.js" defer></script>
+    <title>Canvas joonistamine</title>
+    <link rel="stylesheet" href="canvasStyle.css">
+    <script src="canvasScript.js"></script>
 </head>
 <body>
-
-<h1>Joonistusrakendus Canvas + JS</h1>
-
+<h1>Joonistusrakendus Canvas +JS</h1>
 <canvas id="canvas" width="400" height="400"></canvas>
-
 <table>
     <tr>
         <td>
             <input type="button" value="Puhasta" onclick="puhasta()">
         </td>
     </tr>
-
     <tr>
         <td>
-            <input type="button" value="Joon" onclick="joon()">
+            <input type="button" value="joon" onclick="joon()">
         </td>
     </tr>
-
     <tr>
         <td>
             <input type="button" value="Kolmnurk" onclick="kolmnurk()">
         </td>
     </tr>
-
     <tr>
         <td>
+            <input type="button" value="Ristkülik" onclick="ristkylik()">
             <label for="laius">Laius:</label>
-            <input type="number" id="laius" value="100" min="1">
-
-            <label for="korgus">Kõrgus:</label>
-            <input type="number" id="korgus" value="80" min="1">
-
-            <input type="button" value="Ristkülik" onclick="ristylik()">
+            <input type="number" id="laius" min="1" max="50" step="2" onchange="ristkylik()">
+            <label for="kyrgus">Kõrgus:</label>
+            <input type="number" id="kyrgus" min="1" max="50" step="2" onchange="ristkylik()">
         </td>
     </tr>
-
     <tr>
         <td>
-            <label for="raadius">Raadius:</label>
-            <input type="number" id="raadius" value="30" min="1" max="100">
             <input type="button" value="Ring" onclick="ring()">
+            <label for="raadius">Raadius:</label>
+            <input type="number" id="raadius" min="1" max="50" step="2" onchange="ring()">
         </td>
     </tr>
-
     <tr>
         <td>
-            <input type="button" value="Juhuslik pilt" onclick="pilt()">
+            <input type="button" value="Pilt" onclick="pilt()">
         </td>
     </tr>
 </table>
