@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>joonistamine</title>
+    <link rel="stylesheet" href="canvacss.css">
+    <script src="canvajs.js"></script>
 </head>
 <body>
-
+<h1>Joonistusrakendust Canvas +JS</h1>
+<canvas id="canvas"></canvas>
+<table>
+    <tr>
+        <td>
+            <input type="button" value="Puhasta" onClick="puhasta()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="joon" onClick="joon()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="kolmnurk" onClick="kolmnurk()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Ristkülik" onClick="Ristkülik()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="Ring" onClick="Ring"()>
+            <label for="laius"
+            <label for="raadius">Raadius:</label>
+            <input type="number" id="raadius" min="1" max="50" step="2" onchange="ristylik()">
+        </td>
+    </tr>
+</table>
 </body>
 </html>
