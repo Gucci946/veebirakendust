@@ -1,68 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="et">
 <head>
     <meta charset="UTF-8">
     <title>Canvas joonistamine</title>
-    <link rel="stylesheet" href="canvasStyle.css">
-    <script src="canvasScript.js"></script>
+    <link rel="stylesheet" href="canvacss.css">
+    <script src="canvajs.js" defer></script>
 </head>
 <body>
+
 <h1>Joonistusrakendus Canvas +JS</h1>
+
 <canvas id="canvas" width="400" height="400"></canvas>
+
 <table>
     <tr>
         <td>
             <input type="button" value="Puhasta" onclick="puhasta()">
         </td>
     </tr>
+
     <tr>
         <td>
             <input type="button" value="joon" onclick="joon()">
         </td>
     </tr>
+
     <tr>
         <td>
             <input type="button" value="Kolmnurk" onclick="kolmnurk()">
         </td>
     </tr>
+
     <tr>
         <td>
             <input type="button" value="Ristkülik" onclick="ristkylik()">
+
             <label for="laius">Laius:</label>
-            <input type="number" id="laius" min="1" max="50" step="2" onchange="ristkylik()">
+            <input type="number" id="laius" min="1" max="50" step="2" value="30">
+
             <label for="kyrgus">Kõrgus:</label>
-            <input type="number" id="kyrgus" min="1" max="50" step="2" onchange="ristkylik()">
+            <input type="number" id="kyrgus" min="1" max="50" step="2" value="30">
         </td>
     </tr>
+
     <tr>
         <td>
             <input type="button" value="Ring" onclick="ring()">
+
             <label for="raadius">Raadius:</label>
-            <input type="number" id="raadius" min="1" max="50" step="2" onchange="ring()">
+            <input type="number" id="raadius" min="1" max="50" step="2" value="20">
         </td>
     </tr>
+
     <tr>
         <td>
             <input type="button" value="Pilt" onclick="pilt()">
         </td>
     </tr>
 
-    <td>
-        <input type="button" value="Ratas1" onclick="Ratas1()">
-    </td>
+    <tr>
+        <td><strong>Lihtne auto:</strong></td>
+    </tr>
 
-    <td>
-        <input type="button" value="Ratas" onclick="Ratas2()">
-    </td>
-    <td>
-        <input type="button" value="Kere" onclick="Kere()">
-    </td>
-    <td>
-        <input type="button" value="Tuled" onclick="Tuled()">
-    </td>
-    <td>
-        <input type="button" value="Oma" onclick="Oma()">
-    </td>
+    <tr>
+        <td>
+            <input type="button" value="Ratas1" onclick="Ratas1()">
+            <input type="button" value="Ratas2" onclick="Ratas2()">
+            <input type="button" value="Kere" onclick="Kere()">
+            <input type="button" value="Tuled" onclick="Tuled()">
+        </td>
+    </tr>
+
+    <tr>
+        <td><strong>Minu auto:</strong></td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="button" value="Lamborghini" onclick="minu()">
+        </td>
+    </tr>
+
 </table>
 
 </body>
